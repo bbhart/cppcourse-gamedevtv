@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Brian added
+.DS_Store

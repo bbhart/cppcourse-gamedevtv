@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		391DEBC5272C1F9A0091002F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 391DEBC4272C1F9A0091002F /* main.cpp */; };
+		391DEBCD272C24ED0091002F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391DEBCC272C24ED0091002F /* OpenGL.framework */; };
+		391DEBD1272C27670091002F /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391DEBD0272C27670091002F /* libraylib.a */; };
+		391DEBD7272C2A700091002F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391DEBD6272C2A700091002F /* Cocoa.framework */; };
+		391DEBD8272C2A910091002F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391DEBD2272C2A5D0091002F /* CoreVideo.framework */; };
+		391DEBD9272C2A990091002F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391DEBD4272C2A680091002F /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,13 @@
 /* Begin PBXFileReference section */
 		391DEBC1272C1F9A0091002F /* cppcourse-gamedevtv */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cppcourse-gamedevtv"; sourceTree = BUILT_PRODUCTS_DIR; };
 		391DEBC4272C1F9A0091002F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		391DEBCC272C24ED0091002F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		391DEBCE272C25F70091002F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		391DEBCF272C25F70091002F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		391DEBD0272C27670091002F /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../raylib/src/libraylib.a; sourceTree = "<group>"; };
+		391DEBD2272C2A5D0091002F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		391DEBD4272C2A680091002F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		391DEBD6272C2A700091002F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391DEBD9272C2A990091002F /* IOKit.framework in Frameworks */,
+				391DEBD8272C2A910091002F /* CoreVideo.framework in Frameworks */,
+				391DEBD7272C2A700091002F /* Cocoa.framework in Frameworks */,
+				391DEBCD272C24ED0091002F /* OpenGL.framework in Frameworks */,
+				391DEBD1272C27670091002F /* libraylib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +58,11 @@
 		391DEBB8272C1F9A0091002F = {
 			isa = PBXGroup;
 			children = (
+				391DEBCE272C25F70091002F /* LICENSE */,
+				391DEBCF272C25F70091002F /* README.md */,
 				391DEBC3272C1F9A0091002F /* cppcourse-gamedevtv */,
 				391DEBC2272C1F9A0091002F /* Products */,
+				391DEBCB272C24ED0091002F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +80,18 @@
 				391DEBC4272C1F9A0091002F /* main.cpp */,
 			);
 			path = "cppcourse-gamedevtv";
+			sourceTree = "<group>";
+		};
+		391DEBCB272C24ED0091002F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				391DEBD6272C2A700091002F /* Cocoa.framework */,
+				391DEBD4272C2A680091002F /* IOKit.framework */,
+				391DEBD2272C2A5D0091002F /* CoreVideo.framework */,
+				391DEBD0272C27670091002F /* libraylib.a */,
+				391DEBCC272C24ED0091002F /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +273,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/hart_b/dev/raylib/src;
+				LIBRARY_SEARCH_PATHS = /Users/hart_b/dev/raylib/src;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -249,6 +283,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/hart_b/dev/raylib/src;
+				LIBRARY_SEARCH_PATHS = /Users/hart_b/dev/raylib/src;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
